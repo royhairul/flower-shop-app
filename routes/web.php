@@ -25,11 +25,9 @@ Route::get('/produk', [FlowerController::class, 'product'])->name('product');
 Route::get('/admin', [FlowerController::class,'index'])->name('admin.dashboard');
 
 // Route untuk Login
-Route::get('/login', function() {
-  return view('admin.login');
-});
-Route::post('/login', [LoginController::class,'authenticate'])->name('login.auth');
-Route::post('/logout', [LoginController::class,'logout'])->name('logout');
+Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
+Route::post('/login', [LoginController::class,'authenticate'])->name('admin.login.auth');
+Route::post('/logout', [LoginController::class,'logout'])->name('admin.logout');
 
 
 // Route untuk Create
