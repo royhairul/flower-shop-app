@@ -46,6 +46,7 @@ class FlowerController extends Controller
             'name' => 'required',
             'stock' => 'required',
             'price' => 'required',
+            'category' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
@@ -84,7 +85,8 @@ class FlowerController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required',
-            'stock' => 'required'
+            'stock' => 'required',
+            'category' => 'required'
         ]);
 
         $item = Flower::findOrFail($id);
@@ -92,7 +94,8 @@ class FlowerController extends Controller
         $item->update([
             'name' => $request->name,
             'price' => $request->price,
-            'stock' => $request->stock
+            'stock' => $request->stock,
+            'category' => $request->category
         ]);
 
         return redirect()->route('admin.dashboard');
