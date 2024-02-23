@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<body style="background: lightgray">
+<body>
   <div class="bg-white">
     <header>
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=pink&shade=700" alt="">
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -31,11 +31,11 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
           <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Beranda</a>
-          <a href="/produk" class="text-sm font-semibold leading-6 text-gray-500">Produk Kami</a>
+          <a href="/produk" class="text-sm font-semibold leading-6 text-pink-500">Produk Kami</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/login"
-            class="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</a>
+            class="rounded-md bg-pink-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Login</a>
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -47,7 +47,7 @@
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=pink&shade=600" alt="">
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
               <span class="sr-only">Close menu</span>
@@ -86,7 +86,7 @@
           <div
             class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
             @if ($flower->image)
-            <img src="{{ asset('/storage/' . $flower->image) }}" alt="Uploaded Image"
+            <img src="{{ $flower->image }}" alt="Uploaded Image"
               class="h-full w-full object-cover object-center lg:h-full lg:w-full">
             @else
               <div class="h-full w-full flex flex-col items-center justify-center">
@@ -102,15 +102,18 @@
           </div>
           <div class="mt-4 flex justify-between">
             <div>
-              <h3 class="text-base text-indigo-600 font-bold">
+              <h3 class="text-lg text-pink-800 font-bold">
                 <a href="#">
                   <span aria-hidden="true" class="absolute inset-0"></span>
-                  {{ $flower-> name}}
+                  {{ $flower->name}}
                 </a>
               </h3>
-              <p class="mt-1 text-sm text-gray-500">{{ $flower-> category}}</p>
+              <p class="text-sm italic text-pink-900">{{ $flower->category}}</p>
             </div>
-            <p class="text-base font-bold text-gray-900">Rp. {{ $flower-> price}}</p>
+            <p class="font-bold text-pink-600">
+              <span class="text-sm">Rp.</span>
+              <span class="text-xl">{{ $flower->price}}</span>
+            </p>
           </div>
         </div>
         @endforeach

@@ -6,7 +6,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex h-16 items-center justify-between"> <div
       class="flex items-center">
       <div class="flex-shrink-0">
-        <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+        <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=pink&shade=500" alt="Your Company">
       </div>
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-4">
@@ -153,7 +153,7 @@
                   </svg>
                   <div class="mt-4 flex text-sm leading-6 text-gray-600">
                     <label for="file-upload"
-                      class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                      class="relative cursor-pointer rounded-md bg-white font-semibold text-pink-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-pink-600 focus-within:ring-offset-2 hover:text-pink-500">
                       <span>Upload a file</span>
                       <input id="file-upload" name="file-upload" type="file" class="sr-only">
                     </label>
@@ -171,21 +171,28 @@
               <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nama</label>
               <div class="mt-2">
                 <input type="text" name="name" id="name" value="{{ old('name',$item->name) }}"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2">
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6 p-2">
               </div>
             </div>
             <div class="sm:col-span-1">
               <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Harga</label>
               <div class="mt-2">
                 <input type="text" name="price" id="price" value="{{ old('price',$item->price) }}"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6  p-2">
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6  p-2">
               </div>
             </div>
             <div class="sm:col-span-1">
               <label for="stock" class="block text-sm font-medium leading-6 text-gray-900">Stok</label>
               <div class="mt-2">
                 <input type="number" name="stock" id="stock" value="{{ old('stock',$item->stock) }}"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6  p-2">
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6  p-2">
+              </div>
+            </div>
+            <div class="sm:col-span-1">
+              <label for="category" class="block text-sm font-medium leading-6 text-gray-900">Kategori</label>
+              <div class="mt-2">
+                <input type="text" name="category" id="category" value="{{ old('category',$item->category) }}"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6  p-2">
               </div>
             </div>
             
@@ -195,7 +202,7 @@
       <div class="mt-6 flex items-center justify-end gap-x-6">
         <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
         <button type="submit"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+          class="rounded-md bg-pink-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Save</button>
       </div>
     </form>
     </body>
